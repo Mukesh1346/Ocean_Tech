@@ -1,5 +1,5 @@
 .brand-carousel-container {
-  max-width: 1000px;
+  max-width: 1400px;
   margin: auto;
 }
 
@@ -11,10 +11,15 @@
   transition: transform 0.3s ease, filter 0.3s ease;
 }
 
+.BrandTitle span{
+  color: var(--theme-light);
+}
 .BrandTitle{
     text-align: center;
     color: var(--theme-color);
     font-weight: 800;
+    font-size: 35px;
+
 }
 
 .swiper-slide-active .brand-icon {

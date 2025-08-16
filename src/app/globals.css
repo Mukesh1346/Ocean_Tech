@@ -8,13 +8,15 @@
     --background: #0a0a0a;
     --foreground: #ededed;
   }
+
 }
 
 :root {
   --theme-color:#50586b;   /* Main Brand Color */
   --theme-dark: #dce2f0;    /* Darker Shade */
-  --theme-light: #3b82f6;   /* Lighter Shade */
+  --theme-light: #1796eb;   /* Lighter Shade */
   --text-color:#dce2f0;    /* Default Text */
+  --font-poppins: 'Poppins', sans-serif;
 }
 
 
@@ -28,9 +30,10 @@ body {
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
+  /* font-family: var(--font-poppins); */
+    -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-family: var(--font-poppins, 'Poppins', sans-serif);
 }
 
 * {

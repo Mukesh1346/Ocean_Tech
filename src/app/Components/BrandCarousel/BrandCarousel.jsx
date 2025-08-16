@@ -31,13 +31,13 @@ export default function BrandCarousel() {
   return (
     <>
 
-    <div className='BrandSec'>
+    <div className='BrandSec my-5'>
            <div className='BrandTitleSec'>
-            <h4 className='BrandTitle'> TRUESTED BY 500+ LARGE AND SMALL BUSINESS</h4>
+            <h4 className='BrandTitle'> <span > TRUESTED BY 500+ </span> LARGE AND SMALL BUSINESS</h4>
            </div>
     </div>
 
-    <div className="brand-carousel-container py-5">
+    <div className="brand-carousel-container  py-5">
       <Swiper
         slidesPerView={5}
         spaceBetween={30}

@@ -17,8 +17,8 @@ export default function Home() {
       <div>
          <OurStory/>
          <BrandCarousel/>
-         <Header/>
-         <FeatureSection/>
+         {/* <Header/> */}
+         {/* <FeatureSection/> */}
          <AboutUs/>
          <Faq/>
          <StatsSection/>

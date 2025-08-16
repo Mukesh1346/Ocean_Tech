@@ -69,7 +69,7 @@ export default function AboutUs() {
           {/* Right Image */}
           <div className="col-lg-5 position-relative text-center">
             <div className="dots-pattern"></div>
-            <Image src={pic1} alt="Office Workspace" className="feature-image" />
+            {/* <Image src={pic1} alt="Office Workspace" className="feature-image" /> */}
           </div>
         </div>
       </div>
