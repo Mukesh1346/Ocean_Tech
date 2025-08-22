@@ -15,7 +15,7 @@ export default function NavScrollExample() {
     <Navbar expand="lg" className="bg-body-tertiary px-3">
       <Container fluid>
         {/* Left: Logo */}
-        <Navbar.Brand href="#">
+        <Navbar.Brand href="/">
           <Image src={logo} width={170} alt="logo" />
         </Navbar.Brand>
 

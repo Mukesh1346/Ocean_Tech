@@ -53,7 +53,7 @@ export default function SMSTransection() {
 
           {/* Right Section */}
           <div className="col-md-6 justify-content-center align-items-center d-flex">
-            <div className="FormSection w-75">
+            <div className="FormSection w-100">
             <div className="RightSidetitle text-center mb-4">
               <h1 className="uppercase fontweight spanbold">Get a Quote</h1>
               {/* <p className="text-muted">

@@ -134,6 +134,7 @@ export default function Blog() {
                           {tag}
                         </span>
                       ))}
+                      <hr/>
                     </div>
                   </div>
                 </div>

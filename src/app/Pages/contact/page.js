@@ -1,217 +1,8 @@
-// "use client";
-
-// import React from "react";
-// import GoogleMap from "@/app/Components/GoogleMap/GoogleMap";
-// import InquiaryForm from "@/app/Components/InquiaryForm/InquiaryForm";
-// import { Container, Row, Col } from "react-bootstrap";
-// import {
-//   FaMapMarkerAlt,
-//   FaEnvelope,
-//   FaPhone,
-//   FaInstagram,
-//   FaFacebook,
-//   FaLinkedin,
-//   FaYoutube,
-// } from "react-icons/fa";
-
-// export default function ContactUs() {
-//   return (
-//     <section
-//       className="py-5"
-//       style={{
-//         background: "linear-gradient(135deg, #f8faff, #e6f0ff)",
-//         minHeight: "100vh",
-//       }}
-//     >
-//       <Container>
-//         {/* Heading Section */}
-//         <div className="text-center mb-5">
-//           <h2
-//             className="fw-bold"
-//             style={{
-//               fontSize: "2.5rem",
-//               color: "#0d6efd",
-//             }}
-//           >
-//             Contact Us
-//           </h2>
-//           <p
-//             className="text-secondary mx-auto"
-//             style={{
-//               fontSize: "1.1rem",
-//               maxWidth: "700px",
-//               lineHeight: "1.6",
-//             }}
-//           >
-//             Thanks for your interest in <strong>Ocean Techzone</strong>. We’d
-//             love to hear from you! Please fill out the form, and we’ll get back
-//             to you shortly.
-//           </p>
-//         </div>
-
-//         <Row className="g-4">
-//           {/* Left Side - Contact Info */}
-//           <Col md={6}>
-//             <div
-//               className="shadow-lg p-4 rounded-4 bg-white"
-//               style={{ minHeight: "100%" }}
-//             >
-//               <h4 className="fw-bold mb-3">Get in Touch</h4>
-//               <p className="text-muted">
-//                 Have questions about our services? We're always ready to help!
-//               </p>
-
-//               {/* Address */}
-//               <div className="d-flex align-items-start mb-3">
-//                 <FaMapMarkerAlt
-//                   style={{
-//                     fontSize: "1.4rem",
-//                     color: "#0d6efd",
-//                     marginRight: "12px",
-//                     marginTop: "3px",
-//                   }}
-//                 />
-//                 <p className="mb-0">
-//                   F318, OLD MB ROAD, LADO SARAI, NEW DELHI 110030
-//                 </p>
-//               </div>
-
-//               {/* Email */}
-//               <div className="d-flex align-items-start mb-3">
-//                 <FaEnvelope
-//                   style={{
-//                     fontSize: "1.4rem",
-//                     color: "#0d6efd",
-//                     marginRight: "12px",
-//                     marginTop: "3px",
-//                   }}
-//                 />
-//                 <a
-//                   href="mailto:info@oceantechzone.com"
-//                   className="text-decoration-none"
-//                   style={{
-//                     color: "#333",
-//                     transition: "color 0.3s ease",
-//                   }}
-//                   onMouseEnter={(e) => (e.target.style.color = "#0d6efd")}
-//                   onMouseLeave={(e) => (e.target.style.color = "#333")}
-//                 >
-//                   info@oceantechzone.com
-//                 </a>
-//               </div>
-
-//               {/* Phone */}
-//               <div className="d-flex align-items-start mb-4">
-//                 <FaPhone
-//                   style={{
-//                     fontSize: "1.4rem",
-//                     color: "#0d6efd",
-//                     marginRight: "12px",
-//                     marginTop: "3px",
-//                   }}
-//                 />
-//                 <a
-//                   href="tel:+919289933499"
-//                   className="text-decoration-none"
-//                   style={{
-//                     color: "#333",
-//                     transition: "color 0.3s ease",
-//                   }}
-//                   onMouseEnter={(e) => (e.target.style.color = "#0d6efd")}
-//                   onMouseLeave={(e) => (e.target.style.color = "#333")}
-//                 >
-//                   +91 9289933499
-//                 </a>
-//               </div>
-
-//               {/* Social Media */}
-//               <p className="fw-semibold">Follow us:</p>
-//               <div className="d-flex gap-3 fs-4 mb-4">
-//                 {[
-//                   {
-//                     icon: <FaFacebook />,
-//                     link: "https://www.facebook.com/Promotionkiduniya/",
-//                   },
-//                   {
-//                     icon: <FaInstagram />,
-//                     link: "https://www.instagram.com/oceantechzone?igsh=bXp6NmJqZnM0cnhm",
-//                   },
-//                   {
-//                     icon: <FaLinkedin />,
-//                     link: "https://www.linkedin.com/company/ocean-tech-zone/",
-//                   },
-//                   {
-//                     icon: <FaYoutube />,
-//                     link: "https://www.youtube.com/channel/UC1RKOYMU2fW13keNQmZLKyQ",
-//                   },
-//                 ].map((item, index) => (
-//                   <a
-//                     key={index}
-//                     href={item.link}
-//                     target="_blank"
-//                     rel="noreferrer"
-//                     style={{
-//                       color: "#333",
-//                       transition: "all 0.3s ease",
-//                     }}
-//                     onMouseEnter={(e) => {
-//                       e.target.style.color = "#0d6efd";
-//                       e.target.style.transform = "scale(1.2)";
-//                     }}
-//                     onMouseLeave={(e) => {
-//                       e.target.style.color = "#333";
-//                       e.target.style.transform = "scale(1)";
-//                     }}
-//                   >
-//                     {item.icon}
-//                   </a>
-//                 ))}
-//               </div>
-
-//               {/* Google Map */}
-//               <div
-//                 className="rounded-4 overflow-hidden shadow-sm"
-//                 style={{
-//                   border: "2px solid #e9ecef",
-//                   height: "350px", // Increased map height here
-//                 }}
-//               >
-//                 <GoogleMap />
-//               </div>
-//             </div>
-//           </Col>
-
-//           {/* Right Side - Inquiry Form */}
-//           <Col md={6}>
-//             <div className="shadow-lg p-4 rounded-4 bg-white">
-//               <h4 className="fw-bold mb-3">Send Us a Message</h4>
-//               <p className="text-muted mb-4">
-//                 Fill out the form and we’ll get back to you within 24 hours.
-//               </p>
-//               <InquiaryForm />
-//             </div>
-//           </Col>
-//         </Row>
-//       </Container>
-//     </section>
-//   );
-// }
-
-
-
-
-
-
-
-
-
-
-
 "use client";
 import GoogleMap from "@/app/Components/GoogleMap/GoogleMap";
 import InquiaryForm from "@/app/Components/InquiaryForm/InquiaryForm";
 import React from "react";
-import { Container, Row, Col, Form, Button } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 import {
   FaMapMarkerAlt,
   FaEnvelope,
@@ -224,112 +15,117 @@ import {
 
 export default function ContactUs() {
   return (
-    <section className="contact-us py-5 bg-white text-dark mb-5">
+    <section
+      className="py-5"
+      style={{
+        background: "linear-gradient(135deg, #f8faff, #e6f0ff)",
+        minHeight: "100vh",
+      }}
+    >
       <Container>
-        <h2 className="text-center text-primary mb-4 fw-bold">Contact Us</h2>
-        <p className="text-center mb-5 text-secondary">
-          Thanks for your interest in <strong>Ocean Techzone</strong>. We ll be happy to hear from you.
-          Kindly use this form to share your query and we shall get back to you shortly.
-        </p>
+        {/* Heading */}
+        <div className="text-center mb-5">
+          <h2 className="fw-bold" style={{ fontSize: "2.5rem", color: "#0d6efd" }}>
+            Contact Us
+          </h2>
+          <p
+            className="text-secondary mx-auto"
+            style={{ fontSize: "1.1rem", maxWidth: "700px", lineHeight: "1.6" }}
+          >
+            Thanks for your interest in <strong>Ocean Techzone</strong>. We did love
+            to hear from you! Please fill out the form, and we will get back to you
+            shortly.
+          </p>
+        </div>
 
-        <Row>
-          {/* Left Side - Contact Info */}
-          <Col md={6} className="mb-4">
-            <h4 className="fw-semibold">Get in Touch</h4>
-            <p className="text-muted">
-              For any inquiries or support related to our bulk SMS and marketing services,
-              feel free to reach out. We are here to help!
-            </p>
-
-            <p><FaMapMarkerAlt className="me-2 text-primary" /> F318, OLD MB ROAD, LADO SARAI, NEW DELHI 110030</p>
-            <p><FaEnvelope className="me-2 text-primary" /> <a href="mailto:info@oceantechzone.com" className="text-decoration-none text-dark">info@oceantechzone.com</a></p>
-            <p><FaPhone className="me-2 text-primary" /> <a href="tel:+919289933499" className="text-decoration-none text-dark">+91 9289933499</a></p>
-
-            <p className="mt-4">Follow us:</p>
-            <div className="d-flex gap-3 fs-4 pb-2">
-              <a href="https://www.facebook.com/Promotionkiduniya/" className="text-dark hover-opacity"><FaFacebook /></a>
-              <a href="https://www.instagram.com/oceantechzone?igsh=bXp6NmJqZnM0cnhm" className="text-dark hover-opacity"><FaInstagram /></a>
-              <a href="https://www.linkedin.com/company/ocean-tech-zone/" className="text-dark hover-opacity"><FaLinkedin /></a>
-              <a href="https://www.youtube.com/channel/UC1RKOYMU2fW13keNQmZLKyQ" className="text-dark hover-opacity"><FaYoutube /></a>
+        <Row className="g-4">
+          {/* Contact Form */}
+          <Col
+            md={6}
+            className="mb-4 order-1 order-md-1"
+          >
+            <div className="shadow-lg p-4 rounded-4 bg-white h-100">
+              <h4 className="fw-bold mb-3 text-primary">Request a Callback</h4>
+              <p className="text-muted mb-4">
+                Fill out the form and we will get back to you within 24 hours.
+              </p>
+              <InquiaryForm />
             </div>
-            
-
-            <GoogleMap/>
-
           </Col>
 
-          {/* Right Side - Form */}
-          <Col md={6}>
-            <div className="p-4 rounded ">
-              
-              {/* <Form>
-                <Form.Group className="mb-3">
-                  <Form.Label>Name<span className="text-danger">*</span></Form.Label>
-                  <Form.Control type="text" placeholder="Enter your name" />
-                </Form.Group>
+          {/* Address Section */}
+          <Col
+            md={6}
+            className="mb-4 order-2 order-md-2"
+          >
+            <div className="shadow-lg p-4 rounded-4 bg-white h-100">
+              <h4 className="fw-bold mb-3">Get in Touch</h4>
+              <p className="text-muted">
+                Have questions about our services? We are always ready to help!
+              </p>
 
-                <Form.Group className="mb-3">
-                  <Form.Label>Email<span className="text-danger">*</span></Form.Label>
-                  <Form.Control type="email" placeholder="Enter your email" />
-                </Form.Group>
+              <div className="d-flex align-items-start mb-3">
+                <FaMapMarkerAlt className="me-2 text-primary mt-1" />
+                <p className="mb-0">F318, OLD MB ROAD, LADO SARAI, NEW DELHI 110030</p>
+              </div>
 
-                <Form.Group className="mb-3">
-                  <Form.Label>Phone<span className="text-danger">*</span></Form.Label>
-                  <Form.Control type="text" placeholder="Enter your phone number" />
-                </Form.Group>
+              <div className="d-flex align-items-start mb-3">
+                <FaEnvelope className="me-2 text-primary mt-1" />
+                <a
+                  href="mailto:info@oceantechzone.com"
+                  className="text-decoration-none text-dark"
+                  onMouseEnter={(e) => (e.target.style.color = "#0d6efd")}
+                  onMouseLeave={(e) => (e.target.style.color = "#333")}
+                >
+                  info@oceantechzone.com
+                </a>
+              </div>
 
-                <Form.Group className="mb-3">
-                  <Form.Label>Company</Form.Label>
-                  <Form.Control type="text" placeholder="Your company name" />
-                </Form.Group>
+              <div className="d-flex align-items-start mb-4">
+                <FaPhone className="me-2 text-primary mt-1" />
+                <a
+                  href="tel:+919289933499"
+                  className="text-decoration-none text-dark"
+                  onMouseEnter={(e) => (e.target.style.color = "#0d6efd")}
+                  onMouseLeave={(e) => (e.target.style.color = "#333")}
+                >
+                  +91 9289933499
+                </a>
+              </div>
 
-                <Form.Group className="mb-3">
-                  <Form.Label>Service Interested In</Form.Label>
-                  <Form.Select>
-                    <option>Select Service</option>
-                    <option>Bulk SMS Service</option>
-                    <option>Bulk SMS Promotion</option>
-                    <option>Otp SMS Service</option>
-                    <option>WhatsApp Sms Service</option>
-                    <option>Voice Call Service</option>
-                    <option>IVR Service</option>
-                    <option>Bulk Email Marketing</option>
-                    <option>Bulk Sms Transactional</option>
-                    <option>Rcs Service</option>
-                  </Form.Select>
-                </Form.Group>
+              <p className="fw-semibold">Follow us:</p>
+              <div className="d-flex gap-3 fs-4">
+                {[
+                  { icon: <FaFacebook />, link: "https://www.facebook.com/Promotionkiduniya/" },
+                  { icon: <FaInstagram />, link: "https://www.instagram.com/oceantechzone?igsh=bXp6NmJqZnM0cnhm" },
+                  { icon: <FaLinkedin />, link: "https://www.linkedin.com/company/ocean-tech-zone/" },
+                  { icon: <FaYoutube />, link: "https://www.youtube.com/channel/UC1RKOYMU2fW13keNQmZLKyQ" },
+                ].map((item, index) => (
+                  <a
+                    key={index}
+                    href={item.link}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-dark"
+                    style={{ transition: "all 0.3s ease" }}
+                    onMouseEnter={(e) => { e.target.style.color = "#0d6efd"; e.target.style.transform = "scale(1.2)"; }}
+                    onMouseLeave={(e) => { e.target.style.color = "#333"; e.target.style.transform = "scale(1)"; }}
+                  >
+                    {item.icon}
+                  </a>
+                ))}
+              </div>
+            </div>
+          </Col>
 
-                <Form.Group className="mb-3">
-                  <Form.Label>Message</Form.Label>
-                  <Form.Control as="textarea" rows={3} placeholder="Let us know how we can help" />
-                </Form.Group>
-
-                <Form.Group className="mb-3">
-                  <Form.Check
-                    type="checkbox"
-                    label="I agree to receive messages via WhatsApp, RCS, Email, and other channels."
-                    required
-                  />
-                </Form.Group>
-
-                <Button variant="primary" type="submit" className="w-100">
-                  SUBMIT REQUEST
-                </Button>
-              </Form> */}
-              <h4 className="mb-4 text-primary ">Request a Callback</h4>
-              <InquiaryForm />
+          {/* Map Section */}
+          <Col xs={12} className="order-3">
+            <div className="shadow-lg rounded-4 overflow-hidden mt-3">
+              <GoogleMap />
             </div>
           </Col>
         </Row>
       </Container>
-
-      {/* Hover Style (Inline or move to global CSS) */}
-      <style jsx>{`
-        .hover-opacity:hover {
-          opacity: 0.7;
-          transition: opacity 0.3s ease;
-        }
-      `}</style>
     </section>
   );
 }
