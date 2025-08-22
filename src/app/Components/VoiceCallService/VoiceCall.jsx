@@ -7,6 +7,7 @@ import Pic1 from "@/app/Images/Voice Call Page/Key Features and Benefits of Voic
 import Pic2 from "@/app/Images/Voice Call Page/What is Voice Call Service and How It Benefits Your Business.png"
 
 import Image from "next/image";
+import InquiaryForm from "../InquiaryForm/InquiaryForm";
 
 
 const VoiceServices = [
@@ -20,7 +21,7 @@ const VoiceServices = [
         title: "2. Healthcare",
         desc: "Used for appointment reminders, health tips, lab report alerts, and vaccination drives.",
         link: "/transactional-sms",
-         color: "#0a4adc"
+        color: "#0a4adc"
     },
     {
         title: "3. Retail & E-commerce",
@@ -32,11 +33,11 @@ const VoiceServices = [
         title: "4. Education",
         desc: "Used by schools, colleges, and coaching centers for fee reminders, exam schedules, attendance alerts, and event notifications.",
         link: "/sms-api",
-         color: "#0a4adc"
+        color: "#0a4adc"
     },
     {
         title: " 5. Travel & Transportation",
-        desc: "Sends ticket confirmations, schedule changes, check-in alerts, and booking reminders."	,
+        desc: "Sends ticket confirmations, schedule changes, check-in alerts, and booking reminders.",
         link: "/sms-api",
         color: "#0a4adc"
     },
@@ -71,10 +72,15 @@ export default function SMSWhatsApp() {
 
     return (
         <>
+           
+
+
+
+
             <div className="Voice-Service-MainSec py-5">
                 <div className="container">
                     <div className="row align-items-center">
-                        {/* Left Section */}
+                      
                         <div className="col-md-6 mb-4 mb-md-0">
                           <div className="FormLeftSide">
                           <div className="SMStitle mb-3">
@@ -87,78 +93,18 @@ export default function SMSWhatsApp() {
                                     Deliver promotional, transactional, or reminder messages instantly with our high-quality automated voice call solutions designed for businesses of all sizes.    </p>
                                 <button className="btn themebackground text-light px-4">Schedule Demo</button>
                             </div>
-                          </div>
+                          </div> 
                         </div>
 
-                        {/* Right Section */}
-                        <div className="col-md-6 d-flex justify-content-center">
-                          <div className="w-75">
-                          <div className="RightSidetitle text-center mb-4">
-                                <h1 className="fw-semibold">Get a Quote</h1>
-                                <p className="text-muted">
-                                    Fill in your details and we ll get back to you with the best
-                                    pricing and solution for your needs.
-                                </p>
+                       
+                        <div className="col-md-6 d-flex align-items-center justify-content-center">
+                        <div className="w-75"> 
+                            <div className="RightSidetitle text-center mb-4">
+                                <h1 className="uppercase fontweight spanbold">Get a Quote</h1>
+                               
                             </div>
-
-                            <form onSubmit={handleSubmit} className="p-4 shadow rounded bg-light">
-                                <div className="form-group mb-3">
-                                    <input
-                                        type="text"
-                                        id="name"
-                                        name="name"
-                                        placeholder="Full Name"
-                                        className="form-control"
-                                        value={formData.name}
-                                        onChange={handleChange}
-                                        required
-                                    />
-                                </div>
-
-                                <div className="form-group mb-3">
-                                    <input
-                                        type="email"
-                                        id="email"
-                                        name="email"
-                                        placeholder="Email Address"
-                                        className="form-control"
-                                        value={formData.email}
-                                        onChange={handleChange}
-                                        required
-                                    />
-                                </div>
-
-                                <div className="form-group mb-3">
-                                    <input
-                                        type="tel"
-                                        id="phone"
-                                        name="phone"
-                                        placeholder="Phone Number"
-                                        className="form-control"
-                                        value={formData.phone}
-                                        onChange={handleChange}
-                                        required
-                                    />
-                                </div>
-
-                                <div className="form-group mb-3">
-                                    <textarea
-                                        id="message"
-                                        name="message"
-                                        className="form-control"
-                                        rows="5"
-                                        placeholder="Your Message"
-                                        value={formData.message}
-                                        onChange={handleChange}
-                                        required
-                                    ></textarea>
-                                </div>
-
-                                <button className="btn themebackground text-light w-100" type="submit">
-                                    Submit Query
-                                </button>
-                            </form>
-                          </div>
+                               <InquiaryForm/>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -171,9 +117,9 @@ export default function SMSWhatsApp() {
                     <div className="row">
 
                         <div className="col-md-6  d-grid textCloumn">
-                            
-                            <div>
-                            <h1 className="mb-4 fontweight"> What is <span className="  uppercase"> Voice Call Service </span>and How it <span className="titlebold uppercase"> Benefits Your Business</span> </h1>
+
+                            <div className="mt-5">
+                                <h1 className="mb-4 fontweight"> What is <span className="  uppercase"> Voice Call Service </span>and How it <span className="titlebold uppercase"> Benefits Your Business</span> </h1>
                                 <p>
                                     "Voice call services enable you to connect with customers effortlessly using pre-recorded messages. You can create your own voice message and automate the calling process with just a few simple steps. Managing and keeping track of calls becomes easy with our bulk voice calling service. Our services are ideal for sending crucial information such as:
                                 </p>
@@ -192,7 +138,9 @@ export default function SMSWhatsApp() {
                         </div>
 
                         <div className="col-md-6">
-                            <Image src={Pic1} alt="whatsappimg" className="whatsappImg Pic1" />
+                            <div className="ImageSection">
+                                <Image src={Pic1} alt="whatsappimg" className="VoiceCallImg " />
+                            </div>
                         </div>
                     </div>
 
@@ -203,15 +151,17 @@ export default function SMSWhatsApp() {
 
                     <div className="row">
                         <h1 className="text-center fontweight">
-                        Key  <span className="titlebold">FEATURES</span> and <span className="titlebold"> BENEFITS</span> of <span className="titlebold"> VOICE CALL SERVICE </span>										
-										
+                            Key  <span className="titlebold">FEATURES</span> and <span className="titlebold"> BENEFITS</span> of <span className="titlebold"> VOICE CALL SERVICE </span>
+
                         </h1>
                         <div className="col-md-6">
-                            <Image src={Pic2} alt="whatsappimg" className="whatsappImg Pic1" />
+                            <div className="ImageSection">
+                                <Image src={Pic2} alt="whatsappimg" className="VoiceCallImg " />
+                            </div>
                         </div>
                         <div className="col-md-6 textCloumn">
 
-                            <div>
+                            <div className="mt-5">
                                 <h1 className="mb-4 fontweight">Sends pre-recorded voice messages to many users at the same time through phone calls.</h1>
                                 <p>
                                     <b className="spanbold"> Automated Voice Messaging  :</b>
@@ -235,11 +185,11 @@ export default function SMSWhatsApp() {
 
                                 <p>
                                     <b className="spanbold">  Multi - Language Support  :</b>
-                                   
-Messages can be created in various languages, making it easier to communicate with a broader and more diverse audience.							
+
+                                    Messages can be created in various languages, making it easier to communicate with a broader and more diverse audience.
                                 </p>
 
-                               
+
                             </div>
 
                         </div>
@@ -254,25 +204,40 @@ Messages can be created in various languages, making it easier to communicate wi
 
 
             <div className="Voice-ServiceTitleSec ">
-               <div className="text-center">
-               <h1 className="title titlebold "> VOICE CALL  SERVICES</h1>
-               <p > You can create your own voice message and automate the calling process with just a few simple steps. Managing and keeping track of calls becomes easy with our bulk voice calling service.</p>
-               </div>
+                <div className="text-center">
+                    <h1 className="title titlebold "> VOICE CALL  SERVICES</h1>
+                    <p > You can create your own voice message and automate the calling process with just a few simple steps. Managing and keeping track of calls becomes easy with our bulk voice calling service.</p>
+                </div>
             </div>
             <section className="Voice-Services-section">
                 <div className="container">
-                    <div className="row d-flex justify-content-center align-items-center">
+                    <div className="section-header text-center mb-5">
+                        <h1 className="section-title">
+                            Explore Our <span className="highlight">Voice Call Services</span>
+                        </h1>
+                        <p className="section-subtitle">
+                            Automate your customer communication with clear, fast, and reliable
+                            voice calling solutions.
+                        </p>
+                    </div>
+
+                    <div className="row d-flex justify-content-center align-items-stretch">
                         {VoiceServices.map((service, index) => (
-                            <div className="col-md-4 d-flex justify-content-center align-items-center" key={index}>
+                            <div
+                                className="col-lg-4 col-md-6 col-sm-12 mb-4 d-flex justify-content-center"
+                                key={index}
+                            >
                                 <div
                                     className="Voice-service-card"
                                     style={{ backgroundColor: service.color }}
                                 >
-                                    <h1>{service.title}</h1>
-                                    <p>{service.desc}</p>
-                                    {/* <a href={service.link} className="Ivrservice-btn">
-                  FIND OUT MORE
-                </a> */}
+                                    <div className="card-content">
+                                        <h3 className="card-title">{service.title}</h3>
+                                        <p className="card-desc">{service.desc}</p>
+                                        <a href={service.link} className="Voice-service-btn">
+                                            Learn More →
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         ))}
